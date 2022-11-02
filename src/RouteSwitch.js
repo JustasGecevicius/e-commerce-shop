@@ -13,7 +13,7 @@ export const RouteSwitch = () => {
                 <Route path="/" element={<HomePage />}></Route>
                 <Route path="/profile" element={<Profile/>}></Route>
                 <Route path="/catalogue" element={<Catalogue/>}></Route>
-                <Route path="/cart" element={<ShoppingCart/>}></Route>
+                <Route path="/shopping%20cart" element={<ShoppingCart/>}></Route>
             </Routes>
         </BrowserRouter>
     )

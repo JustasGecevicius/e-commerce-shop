@@ -1,7 +1,14 @@
 import { Header } from "./Sections/Header"
 
+
+
+
 export const ShoppingCart = () => {
   return (
-    <Header section = "Shopping Cart"/>
+    <div className="wrapper">
+      <Header section = "Shopping Cart"/>
+      <p>Cart Count :</p>
+    </div>
+    
   );
 };
