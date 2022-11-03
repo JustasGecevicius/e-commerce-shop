@@ -1,7 +1,7 @@
 import { Header } from "./Sections/Header"
 
-export const Profile = () => {
+export const Profile = ({cartCount}) => {
   return (
-    <Header section = "Profile"/>
+    <Header cartCount={cartCount}/>
   );
 };

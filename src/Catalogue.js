@@ -4,7 +4,7 @@ import { itemsObject } from "./Components/ItemsObject";
 import { BikeSelection } from "./Sections/BikeSelection";
 import { Header } from "./Sections/Header";
 
-export const Catalogue = () => {
+export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadAll, setMountainRoadAll}) => {
   require.context(
     "/public/Images/canyon/Mountain",
     false,
@@ -37,9 +37,6 @@ export const Catalogue = () => {
     canyon: false,
     specialized: false,
   });
-  const [cartCount, setCartCount] = useState(0);
-  const [cart, setCart] = useState({});
-  const [MountainRoadAll, setMountainRoadAll] = useState("all");
   const [brandsArray, setBrandsArray] = useState([]);
   const [displayItems, setDisplayItems] = useState([]);
 
@@ -128,7 +125,7 @@ export const Catalogue = () => {
     const terrain = e["target"]["dataset"]["terrain"];
 
     if (Object.keys(cart).includes(id)) {
-      console.log("cia");
+      //console.log("cia");
       setCart((prev) => {
         const newCount = prev[id]["count"] + 1;
         return { ...prev, [id]: { ...prev[id], count: newCount } };
@@ -143,36 +140,45 @@ export const Catalogue = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(displayItems);
-  }, [displayItems]);
+  // useEffect(() => {
+  //   console.log(displayItems);
+  // }, [displayItems]);
+
+  // useEffect(() => {
+  //   console.log(cartCount);
+  // }, [cartCount]);
 
   useEffect(() => {
-    console.log(cartCount);
-  }, [cartCount]);
-
-  useEffect(() => {
-    console.log(cart);
+    //console.log(cart);
     let newCartCount = 0;
     Object.keys(cart).forEach((item) => {
       newCartCount += cart[item]["count"];
     });
     setCartCount(newCartCount);
     //console.log(newCartCount);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart]);
 
   return (
     <div>
-      <Header section="Catalogue" />
-      <BikeSelection
-        displayTerrain={displayTerrain}
-        displayBrand={displayBrand}
-      />
-      <p>Items in Cart: {cartCount}</p>
-      <div className="allItems">
-        {displayItems.map((item, index) => {
-          return <ItemCard key={index} {...item} updateCart={updateCart} />;
-        })}
+      <Header cartCount={cartCount}/>
+      <div className="catalogueDiv">
+        <div class="picturesDiv">
+          <div className="side1Div"></div>
+          <div className="side2Div"></div>
+        </div>
+        <div className="thingsDiv">
+          <BikeSelection
+            displayTerrain={displayTerrain}
+            displayBrand={displayBrand}
+          />
+          <p>Items in Cart: {cartCount}</p>
+          <div className="allItems">
+            {displayItems.map((item, index) => {
+              return <ItemCard key={index} {...item} updateCart={updateCart} />;
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

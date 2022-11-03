@@ -1,19 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export const NavigationButton = ({ page }) => {
-  const link = page
-    ? "http://localhost:3000/" + page.toLowerCase()
-    : "http://localhost:3000/";
 
-    let text;
-
-    page ? text = page : text = "Home";    
+export const NavigationButton = ({ page, pageName }) => { 
 
   return (
     <React.Fragment>
-      <a href={link} className="buttonWrapper">
-        <button type="button" title={text}>{text}</button>
-      </a>
+      <Link to={page}>
+        <button type="button" title={pageName}>{pageName}</button>
+      </Link>
     </React.Fragment>
   );
 };

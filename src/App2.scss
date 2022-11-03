@@ -1,0 +1,167 @@
+:root {
+    --color-red: #ec1840;
+    --color-purple: #7a18ec;
+    --color-white: #fff;
+    --color-black-1: #111;
+    --color-black-2: #222;
+    --color-black-3: #444;
+    --speed-normal: 0.5s;
+    --speed-fast: 0.8s;
+  }
+
+.itemImage{
+    max-width: 400px;
+  }
+  
+  .shoppingCartItemImage{
+    max-width: 300px;
+  }
+  
+  .header{
+
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    display: flex;  
+    padding: 0.5rem;
+    justify-content: space-between;
+    .navButtons{
+        padding-right: 2rem;
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
+    }
+  }
+
+  .homeSection{
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+  
+  .backgroundImg1{
+    padding-left: 5rem;
+    justify-content:left;
+    background-image: url(/src/WebsiteImages/initial.webp);
+
+  }
+  .backgroundImg2{
+    justify-content: left;
+    text-align: left;    
+    background-image: url(/src/WebsiteImages/mountain.jpg);
+    h2{
+        line-height: 3,5rem;
+
+    }
+  }
+  .backgroundImg3{
+    color: black;
+    background-image: url(/src/WebsiteImages/road.png);
+  }
+
+  .innerDivWrapper{
+padding-left: 5rem;
+  }
+
+
+  .homePage{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logoImage{
+    width: 150px;
+  }
+
+  
+  /* CSS */
+  button {
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0.1rem 0.6rem;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+  }
+  
+  button:disabled {
+    pointer-events: none;
+  }
+  
+  button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  .cartImage{
+    max-width: 50px;
+    &:hover{
+        cursor: pointer;
+    }
+  }
+  .cartLabel{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    text-decoration: none;
+
+  }
+  .linkToCart{
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+  }
+
+  .bigButton{
+    font-size: 1.5rem;
+    padding-bottom: 4px;
+  }
+
+  .catalogueDiv{
+    display: flex;
+    flex-direction: column;
+    .picturesDiv{
+        display: flex;
+        flex-direction: row;
+        .side1Div{
+            background-image: url(/src/WebsiteImages/roadside.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 50vw;
+            height: 100vh;
+        }
+        .side2Div{
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 50vw;
+            height: 100vh;
+            background-image: url(/src/WebsiteImages/mountainside.jpg);
+        }
+
+    }
+
+  }
