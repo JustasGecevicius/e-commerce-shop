@@ -9,15 +9,12 @@
   --speed-fast: 0.8s;
 }
 
-.itemImage {
-  max-width: 400px;
-}
-
 .shoppingCartItemImage {
   max-width: 300px;
 }
 
 .header {
+  z-index: 10;
   position: fixed;
   background-color: white;
   width: 100vw;
@@ -140,13 +137,14 @@ button:active {
 .catalogueDiv {
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
 .catalogueDiv .picturesDiv {
   display: flex;
   flex-direction: row;
 }
 .catalogueDiv .picturesDiv .side1Div {
-  background-image: url(/src/WebsiteImages/roadside.jpeg);
+  background-image: url(/src/WebsiteImages/roadside.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -160,4 +158,119 @@ button:active {
   width: 50vw;
   height: 100vh;
   background-image: url(/src/WebsiteImages/mountainside.jpg);
+}
+.catalogueDiv .picturesDiv h2 {
+  text-align: center;
+  color: white;
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.catalogueDiv .allItems {
+  padding-top: 2rem;
+  width: 100vw;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 2rem;
+}
+.catalogueDiv .item {
+  max-width: 400px;
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.catalogueDiv .item .itemImage {
+  max-width: 320px;
+}
+.catalogueDiv .bikeChoice {
+  display: flex;
+  text-align: center;
+}
+.catalogueDiv .bikeChoice .brandChoice {
+  width: 50vw;
+}
+.catalogueDiv .bikeChoice .brandChoice .checkBoxWrapper {
+  display: flex;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  justify-content: center;
+}
+.catalogueDiv .bikeChoice .terrainChoice {
+  width: 50vw;
+}
+.catalogueDiv .bikeChoice .terrainChoice .radioButtonWrapper {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.catalogueDiv .selectionLogo {
+  max-width: 100px;
+  max-height: 50px;
+  border-radius: 5px;
+}
+.catalogueDiv .active {
+  border-bottom: 2px solid black;
+}
+.catalogueDiv .labelContainer input {
+  display: none;
+}
+.catalogueDiv .thingsDiv {
+  text-align: center;
+}
+
+.terrain {
+  max-height: 50px;
+}
+
+.selectedItems {
+  background-color: rgb(240, 240, 240);
+  position: relative;
+  top: 70px;
+  background-color: rgb(240, 240, 240);
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  row-gap: 1rem;
+}
+.selectedItems .shoppingCartItemCard {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+}
+.selectedItems .shoppingCartItemCard img {
+  height: 100px;
+}
+.selectedItems .shoppingCartItemCard .shoppingCartItemTextDiv {
+  padding: 0 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartItemNumber {
+  width: 2rem;
+}
+
+.checkoutButton {
+  outline: solid green;
+  z-index: 20;
+  position: relative;
+  top: 90px;
+  right: -50%;
+  transform: translate(-50%);
+}
+
+.wrapper {
+  position: relative;
 }

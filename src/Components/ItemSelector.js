@@ -1,15 +1,25 @@
 import React from "react";
 
-export const ItemSelector = ({type, className, onChange}) => {
+export const ItemSelector = ({type, className, onChange, src}) => {
+
+  // const outline = (e) => {
+  //   e.preventDefault();
+  //   console.log(e);
+  //   e.target.classList.toggle("active");
+  // }
+
   return (
     <React.Fragment>
-      <label className={className.toLowerCase()}>
-        {className}
+      <label className={className + " labelContainer"}>
+        <img src={src} className={"selectionLogo"} alt="logo"/>
         <input
           type={type}
-          className={className.toLowerCase()}
+          className={className}
           onChange={onChange}
-          name = "type"
+          onClick={(e) => {
+            //console.log(e);
+            e.nativeEvent.path[1].classList.toggle("active")
+          }}
         ></input>
       </label>
     </React.Fragment>

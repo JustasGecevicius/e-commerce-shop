@@ -103,20 +103,21 @@ export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadA
 
   const displayBrand = (event) => {
     if (event.target.checked) {
-      console.log("✅ Checkbox is checked", event);
+      //console.log("✅ Checkbox is checked", event);
       setCheckedItems((prev) => {
-        return { ...prev, [event.target.className]: true };
+        return { ...prev, [event.target.classList[0]]: true };
       });
     } else {
-      console.log("⛔️ Checkbox is NOT checked");
+      //console.log("⛔️ Checkbox is NOT checked");
       setCheckedItems((prev) => {
-        return { ...prev, [event.target.className]: false };
+        return { ...prev, [event.target.classList[0]]: false };
       });
     }
   };
 
   const displayTerrain = (event) => {
-    setMountainRoadAll(event.target.className);
+    //console.log("ter",event.target.classList[0])
+    setMountainRoadAll(event.target.classList[0]);
   };
 
   const updateCart = (e) => {
@@ -141,8 +142,8 @@ export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadA
   };
 
   // useEffect(() => {
-  //   console.log(displayItems);
-  // }, [displayItems]);
+  //   console.log(checkedBrands);
+  // }, [checkedBrands]);
 
   // useEffect(() => {
   //   console.log(cartCount);
@@ -152,7 +153,7 @@ export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadA
     //console.log(cart);
     let newCartCount = 0;
     Object.keys(cart).forEach((item) => {
-      newCartCount += cart[item]["count"];
+      newCartCount += +cart[item]["count"];
     });
     setCartCount(newCartCount);
     //console.log(newCartCount);
@@ -163,16 +164,18 @@ export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadA
     <div>
       <Header cartCount={cartCount}/>
       <div className="catalogueDiv">
-        <div class="picturesDiv">
+        <div className="picturesDiv">
           <div className="side1Div"></div>
           <div className="side2Div"></div>
+          <h2>Explore our Offerings!</h2>
         </div>
         <div className="thingsDiv">
           <BikeSelection
             displayTerrain={displayTerrain}
             displayBrand={displayBrand}
+            MountainRoadAll={MountainRoadAll}
           />
-          <p>Items in Cart: {cartCount}</p>
+         <h2> Available Options:</h2>
           <div className="allItems">
             {displayItems.map((item, index) => {
               return <ItemCard key={index} {...item} updateCart={updateCart} />;

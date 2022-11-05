@@ -9,10 +9,10 @@ export const ItemCard = ({
 }) => {
   //console.log(updateCart);
   return (
-    <div>
-      <h4 className="itemTitle">{productName}</h4>
+    <div className="item">
       <img className="itemImage" src={imageURL} alt="Item" />
-      <p className="itemPrice">{price}</p>
+      <h3 className="itemTitle">{productName}</h3>
+      <p className="itemPrice"> {price}{String.fromCharCode(36)}</p>
       <button
         className="addItemButton"
         type="button"

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./css/App2.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import HomePage from "./HomePage";
 import { Profile } from "./Profiles";
 import { Catalogue } from "./Catalogue";
 import { ShoppingCart } from "./ShoppingCart";
+import ScrollToTop from "./ScrollToTop";
 
 export const App = () => {
   const [cart, setCart] = useState({});
@@ -22,7 +23,9 @@ export const App = () => {
 
   return (
     <BrowserRouter>
+      <ScrollToTop/>
       <Routes>
+        
         <Route path="/" element={<HomePage cartCount={cartCount} mountainCatalogue={mountainCatalogue} roadCatalogue={roadCatalogue}/>}></Route>
         <Route
           path="/profile"
