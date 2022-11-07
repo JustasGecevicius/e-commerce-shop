@@ -161,7 +161,7 @@ export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadA
   }, [cart]);
 
   return (
-    <div>
+    <div className="catalogue">
       <Header cartCount={cartCount}/>
       <div className="catalogueDiv">
         <div className="picturesDiv">

@@ -1,33 +1,56 @@
-:root {
-  --color-red: #ec1840;
-  --color-purple: #7a18ec;
-  --color-white: #fff;
-  --color-black-1: #111;
-  --color-black-2: #222;
-  --color-black-3: #444;
-  --speed-normal: 0.5s;
-  --speed-fast: 0.8s;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .shoppingCartItemImage {
-  max-width: 300px;
+  height: 100%;
+  width: 280px;
 }
 
 .header {
+  padding: 1rem;
   z-index: 10;
   position: fixed;
   background-color: white;
   width: 100vw;
   display: flex;
-  padding: 0.5rem;
   justify-content: space-between;
 }
 .header .navButtons {
-  padding-right: 2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
   align-items: center;
+}
+.header .logoImage {
+  width: 150px;
+}
+
+.cartImage {
+  max-width: 50px;
+}
+.cartImage:hover {
+  cursor: pointer;
+}
+
+.cartLabel {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  min-width: 60px;
+  justify-content: space-between;
+}
+
+.linkToCart {
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
 }
 
 .homeSection {
@@ -72,10 +95,6 @@
   flex-direction: column;
 }
 
-.logoImage {
-  width: 150px;
-}
-
 /* CSS */
 button {
   border: 1px solid black;
@@ -87,7 +106,6 @@ button {
   font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
-  margin: 0;
   padding: 0.1rem 0.6rem;
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
   touch-action: manipulation;
@@ -109,29 +127,10 @@ button:active {
   transform: translateY(0);
 }
 
-.cartImage {
-  max-width: 50px;
-}
-.cartImage:hover {
-  cursor: pointer;
-}
-
-.cartLabel {
-  display: flex;
-  align-items: center;
-  margin-left: 1rem;
-  text-decoration: none;
-}
-
-.linkToCart {
-  font-weight: 500;
-  color: black;
-  text-decoration: none;
-}
-
 .bigButton {
   font-size: 1.5rem;
   padding-bottom: 4px;
+  margin-top: 2rem;
 }
 
 .catalogueDiv {
@@ -187,12 +186,21 @@ button:active {
   width: -moz-fit-content;
   width: fit-content;
 }
+.catalogueDiv .item h3 {
+  margin: 1rem 0;
+}
+.catalogueDiv .item p {
+  margin-bottom: 1rem;
+}
 .catalogueDiv .item .itemImage {
   max-width: 320px;
 }
 .catalogueDiv .bikeChoice {
   display: flex;
   text-align: center;
+}
+.catalogueDiv .bikeChoice h2 {
+  margin: 1rem 0;
 }
 .catalogueDiv .bikeChoice .brandChoice {
   width: 50vw;
@@ -226,29 +234,31 @@ button:active {
 .catalogueDiv .thingsDiv {
   text-align: center;
 }
+.catalogueDiv .thingsDiv h2 {
+  margin: 1rem 0;
+}
 
 .terrain {
   max-height: 50px;
 }
 
 .selectedItems {
+  width: 100vw;
   background-color: rgb(240, 240, 240);
   position: relative;
-  top: 70px;
+  top: calc(50px + 2rem);
   background-color: rgb(240, 240, 240);
-  height: 70vh;
+  max-height: calc(100vh - 50px - 5rem);
   display: flex;
   flex-direction: column;
   padding: 2rem;
   row-gap: 1rem;
 }
 .selectedItems .shoppingCartItemCard {
+  height: 120px;
   display: flex;
   background-color: white;
   justify-content: space-between;
-}
-.selectedItems .shoppingCartItemCard img {
-  height: 100px;
 }
 .selectedItems .shoppingCartItemCard .shoppingCartItemTextDiv {
   padding: 0 0.5rem;
@@ -263,14 +273,51 @@ button:active {
 }
 
 .checkoutButton {
-  outline: solid green;
   z-index: 20;
   position: relative;
-  top: 90px;
+  top: 100px;
   right: -50%;
   transform: translate(-50%);
 }
+.checkoutButton:hover {
+  transform: translateY(-2px) translate(-50%);
+}
 
 .wrapper {
-  position: relative;
+  height: 100vh;
+}
+
+.profilesWrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0f;
+}
+
+.profilesBackground {
+  padding: 2rem;
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 50px - 2rem);
+  top: calc(50px + 2rem);
+  overflow-y: hidden;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+}
+.profilesBackground h2 {
+  margin-bottom: 2rem;
+}
+.profilesBackground .inputSection {
+  margin-bottom: 1rem;
+}
+.profilesBackground .form {
+  display: flex;
+  flex-direction: column;
+}
+.profilesBackground .form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
