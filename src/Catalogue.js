@@ -175,7 +175,7 @@ export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadA
             displayBrand={displayBrand}
             MountainRoadAll={MountainRoadAll}
           />
-         <h2> Available Options:</h2>
+         <h2> Available Options</h2>
           <div className="allItems">
             {displayItems.map((item, index) => {
               return <ItemCard key={index} {...item} updateCart={updateCart} />;
