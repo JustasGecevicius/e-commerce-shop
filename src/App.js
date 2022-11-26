@@ -38,13 +38,13 @@ export const App = () => {
       <ScrollToTop/>
       <Routes>
         
-        <Route path="/" element={<HomePage cartCount={cartCount} mountainCatalogue={mountainCatalogue} roadCatalogue={roadCatalogue}/>}></Route>
+        <Route path="/e-commerce-shop" element={<HomePage cartCount={cartCount} mountainCatalogue={mountainCatalogue} roadCatalogue={roadCatalogue}/>}></Route>
         <Route
-          path="/profile"
+          path="/e-commerce-shop/profile"
           element={<Profile cartCount={cartCount} />}
         ></Route>
         <Route
-          path="/catalogue"
+          path="/e-commerce-shop/catalogue"
           element={
             <Catalogue
               cart={cart}
@@ -58,7 +58,7 @@ export const App = () => {
           }
         ></Route>
         <Route
-          path="/shopping%20cart"
+          path="/e-commerce-shop/shopping%20cart"
           element={
             <ShoppingCart
               cart={cart}
