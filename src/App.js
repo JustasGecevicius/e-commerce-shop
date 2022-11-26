@@ -6,6 +6,8 @@ import { Profile } from "./Profiles";
 import { Catalogue } from "./Catalogue";
 import { ShoppingCart } from "./ShoppingCart";
 import ScrollToTop from "./ScrollToTop";
+import {initializeApp} from "firebase/app";
+
 
 export const App = () => {
   const [cart, setCart] = useState({});
@@ -20,6 +22,16 @@ export const App = () => {
     setMountainRoadAll("road");
   }
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyAjWsF01onILcLxPF3xflwDm5gyNqBh0ZE",
+    authDomain: "e-commerce-11ece.firebaseapp.com",
+    projectId: "e-commerce-11ece",
+    storageBucket: "e-commerce-11ece.appspot.com",
+    messagingSenderId: "341589599796",
+    appId: "1:341589599796:web:8261420e27b8dff291cc61"
+  };
+
+  const app = initializeApp(firebaseConfig);
 
   return (
     <BrowserRouter>
@@ -41,6 +53,7 @@ export const App = () => {
               cartCount={cartCount}
               MountainRoadAll={MountainRoadAll}
               setMountainRoadAll={setMountainRoadAll}
+              app={app}
             />
           }
         ></Route>

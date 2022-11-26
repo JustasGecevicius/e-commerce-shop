@@ -3,8 +3,11 @@ import { ItemCard } from "./Components/ItemCard";
 import { itemsObject } from "./Components/ItemsObject";
 import { BikeSelection } from "./Sections/BikeSelection";
 import { Header } from "./Sections/Header";
+//import { getStorage, ref, listAll, getDownloadURL} from "firebase/storage";
 
-export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadAll, setMountainRoadAll}) => {
+export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadAll, setMountainRoadAll, app}) => {
+ // const [imagesObject, setimagesObject] = useState({});
+
   require.context(
     "/public/Images/canyon/Mountain",
     false,
@@ -103,12 +106,10 @@ export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadA
 
   const displayBrand = (event) => {
     if (event.target.checked) {
-      //console.log("✅ Checkbox is checked", event);
       setCheckedItems((prev) => {
         return { ...prev, [event.target.classList[0]]: true };
       });
     } else {
-      //console.log("⛔️ Checkbox is NOT checked");
       setCheckedItems((prev) => {
         return { ...prev, [event.target.classList[0]]: false };
       });
@@ -116,9 +117,52 @@ export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadA
   };
 
   const displayTerrain = (event) => {
-    //console.log("ter",event.target.classList[0])
     setMountainRoadAll(event.target.classList[0]);
   };
+
+  // const ProjectsArray = [
+  //   "cannondale",
+  //   "canyon",
+  //   "specialized"  
+  // ];
+
+  // const fetchImages = async () => {
+  //   const allImages = ProjectsArray.map(async (elem) => {
+  //     const storage = await getStorage(app);
+  //     const imagesRef = await ref(storage, elem);
+  //     const mountainRef = await ref(imagesRef, "mountain");
+  //     const roadRef = await ref(imagesRef, "road");
+
+  //     const imagesListMountain = await listAll(mountainRef);
+  //     const imagesListRoad = await listAll(roadRef);
+  //     //console.log(imagesListMountain, "mountainRef");
+  //     //console.log(imagesListRoad, "roadRef");
+  //     const roadPromises = Object.keys(imagesListRoad["items"]).map((imageRef) =>
+  //       getDownloadURL(imagesListRoad["items"][imageRef])
+  //   );
+  //   //console.log(roadPromises, "roadPromises");
+  //   const mountainPromises = Object.keys(imagesListMountain["items"]).map((imageRef) =>
+  //       getDownloadURL(imagesListMountain["items"][imageRef])
+  //   );
+  //     //console.log(imagesRef);
+  //     const promises = [...roadPromises,"", ...mountainPromises]; 
+  //     console.log(promises, "promises");
+  //     return Promise.all(promises);
+  //   });
+
+  //   const bybydejau = await Promise.all(allImages);
+  //   console.log(bybydejau);
+  //   const newBybyDejau = bybydejau.reduce(
+  //     (acc, curr, index) => ({ ...acc, [ProjectsArray[index]]: curr }),
+  //     {}
+  //   );
+  //   setimagesObject(newBybyDejau);
+  // };
+
+  // useEffect (() => {fetchImages()},[]);
+
+  // useEffect (() => {console.log(imagesObject)},[imagesObject]);
+
 
   const updateCart = (e) => {
     const id = e["target"]["dataset"]["id"];
@@ -126,7 +170,6 @@ export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadA
     const terrain = e["target"]["dataset"]["terrain"];
 
     if (Object.keys(cart).includes(id)) {
-      //console.log("cia");
       setCart((prev) => {
         const newCount = prev[id]["count"] + 1;
         return { ...prev, [id]: { ...prev[id], count: newCount } };
@@ -141,23 +184,12 @@ export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadA
     }
   };
 
-  // useEffect(() => {
-  //   console.log(checkedBrands);
-  // }, [checkedBrands]);
-
-  // useEffect(() => {
-  //   console.log(cartCount);
-  // }, [cartCount]);
-
   useEffect(() => {
-    //console.log(cart);
     let newCartCount = 0;
     Object.keys(cart).forEach((item) => {
       newCartCount += +cart[item]["count"];
     });
     setCartCount(newCartCount);
-    //console.log(newCartCount);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart]);
 
   return (
