@@ -1,23 +1,29 @@
 import React from "react";
 
-export const RadioItemSelector = ({type, className, onChange, src, MountainRoadAll}) => {
+export const RadioItemSelector = ({
+  type,
+  className,
+  onChange,
+  src,
+  MountainRoadAll,
+}) => {
+  let newClass;
 
-let newClass;
-
-if(MountainRoadAll === className){
+  if (MountainRoadAll === className) {
     newClass = className + " active labelContainer";
-}
-else{newClass = className + " labelContainer"}
+  } else {
+    newClass = className + " labelContainer";
+  }
 
-//console.log("newCLass",newClass);
+  ////console..log("newCLass",newClass);
   return (
     <React.Fragment>
-      <label className={newClass} >        
-        <img src={src} className={"selectionLogo"} alt="logo"/>
+      <label className={newClass}>
+        <img src={src} className={"selectionLogo"} alt="logo" />
         <input
           type={type}
           onChange={onChange}
-          name = "type"
+          name="type"
           className={className}
         ></input>
       </label>

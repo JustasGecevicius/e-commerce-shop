@@ -9,11 +9,11 @@ export const Header = ({ cartCount }) => {
         <img className="logoImage" alt="logo" src={image}></img>
       </div>
       <div className="navButtons">
-        <NavigationButton page="/" pageName="Home" />
-        <NavigationButton page="/catalogue" pageName="Catalogue" />
-        <NavigationButton page="/profile" pageName="Profile" />
+        <NavigationButton page="/e-commerce-shop" pageName="Home" />
+        <NavigationButton page="/e-commerce-shop/catalogue" pageName="Catalogue" />
+        <NavigationButton page="/e-commerce-shop/profile" pageName="Profile" />
         <ShoppingCartSymbol
-          page="/shopping%20cart"
+          page="/e-commerce-shop/shopping%20cart"
           pageName="Shopping Cart"
           cartCount={cartCount}
         />

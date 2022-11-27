@@ -11,9 +11,9 @@ export const ShoppingCartItemCard = ({
   setCartCount,
 }) => {
   const cartItemNumberChange = (e) => {
-    console.log(e.target.value);
+    //console..log(e.target.value);
     setCart((prev) => {
-      console.log(prev[e.target.id]);
+      //console..log(prev[e.target.id]);
       return {
         ...prev,
         [e.target.id]: { ...prev[e.target.id], count: e.target.value },
@@ -22,7 +22,7 @@ export const ShoppingCartItemCard = ({
   };
 
   useEffect(() => {
-    console.log(cart);
+    //console..log(cart);
     let newCartCount = 0;
     Object.keys(cart).forEach((item) => {
       newCartCount += +cart[item]["count"];
@@ -30,24 +30,20 @@ export const ShoppingCartItemCard = ({
     setCartCount(newCartCount);
   }, [cart]);
 
-
   const removeItem = (e) => {
-    console.log(e);
+    //console..log(e);
     setCart((prev) => {
-      let zeba = {...prev};
-        if(Object.keys(zeba).length===1){
-          console.log("length===1")
-          zeba = {};
-          return zeba
-        }
-        else{
-            delete zeba[e.target.className];
-       return zeba;
-        }
-
-
-    })
-  }
+      let zeba = { ...prev };
+      if (Object.keys(zeba).length === 1) {
+        //console..log("length===1")
+        zeba = {};
+        return zeba;
+      } else {
+        delete zeba[e.target.className];
+        return zeba;
+      }
+    });
+  };
 
   return (
     <div className="shoppingCartItemCard">
@@ -72,7 +68,9 @@ export const ShoppingCartItemCard = ({
               onChange={cartItemNumberChange}
             ></input>
           </p>
-          <button className={item} onClick={removeItem}>Remove item</button>
+          <button className={item} onClick={removeItem}>
+            Remove item
+          </button>
         </div>
       </div>
     </div>
