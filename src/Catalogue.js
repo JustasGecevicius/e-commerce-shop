@@ -153,9 +153,6 @@ export const Catalogue = ({cart, setCart, cartCount, setCartCount, MountainRoadA
 
   useEffect (() => {fetchImages()},[]);
 
-  // useEffect (() => {
-  //   //console.log(displayItems)},[displayItems]);
-
   const updateCart = (e) => {
     const id = e["target"]["dataset"]["id"];
     const brand = e["target"]["dataset"]["brand"];

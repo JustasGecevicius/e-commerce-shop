@@ -13,7 +13,7 @@ export const BikeSelection = ({ displayBrand, displayTerrain, MountainRoadAll })
 
   return (
     <div className="bikeChoice">
-      <div className="brandChoice">
+      <div className="brandChoice choice">
         <h2> Choose a brand!</h2>
         <div className="checkBoxWrapper">
           <ItemSelector
@@ -36,7 +36,7 @@ export const BikeSelection = ({ displayBrand, displayTerrain, MountainRoadAll })
           />
         </div>
       </div>
-      <div className="terrainChoice">
+      <div className="terrainChoice choice">
         <h2>Choose a type!</h2>
         <div className="radioButtonWrapper">
 

@@ -321,3 +321,67 @@ button:active {
   flex-direction: column;
   margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 500px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+  .header .linkToCart {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  .header .navButtons {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-around !important;
+  }
+  .homeSection {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .homeSection .innerDivWrapper {
+    padding: 0;
+  }
+  .selectedItems {
+    top: calc(90px + 2rem);
+  }
+  .shoppingCartItemCard {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  .shoppingCartItemCard .shoppingCartItemTextDiv {
+    padding: 1rem !important;
+  }
+  .shoppingCartItemCard .shoppingCartItemTextDiv .amountWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+  }
+  .checkoutButton {
+    top: 150px !important;
+  }
+  .profilesBackground {
+    top: calc(100px + 2rem);
+  }
+}
+@media screen and (max-width: 720px) {
+  .bikeChoice {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bikeChoice .choice {
+    width: 100% !important;
+  }
+}

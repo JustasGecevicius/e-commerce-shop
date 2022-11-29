@@ -16,6 +16,7 @@ export const Header = ({ cartCount }) => {
           page="/e-commerce-shop/shopping%20cart"
           pageName="Shopping Cart"
           cartCount={cartCount}
+          className="cartbutton"
         />
       </div>
     </div>
