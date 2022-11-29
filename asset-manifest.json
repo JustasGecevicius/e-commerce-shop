@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/e-commerce-shop/static/css/main.62275cf8.css",
-    "main.js": "/e-commerce-shop/static/js/main.953c4f34.js",
+    "main.css": "/e-commerce-shop/static/css/main.046a8f0f.css",
+    "main.js": "/e-commerce-shop/static/js/main.66113e3f.js",
     "static/media/mountain.jpg": "/e-commerce-shop/static/media/mountain.8749a67d0b5114f5bb3a.jpg",
     "static/media/road.png": "/e-commerce-shop/static/media/road.32b3a5827d6d81a8cfb5.png",
     "static/media/mountainside.jpg": "/e-commerce-shop/static/media/mountainside.dcd80e9ddade80395d03.jpg",
@@ -17,11 +17,11 @@
     "static/media/specializedlogo.png": "/e-commerce-shop/static/media/specializedlogo.d9677f3211961654a84e.png",
     "index.html": "/e-commerce-shop/index.html",
     "static/media/none.webp": "/e-commerce-shop/static/media/none.31d6cfe0d16ae931b73c.webp",
-    "main.62275cf8.css.map": "/e-commerce-shop/static/css/main.62275cf8.css.map",
-    "main.953c4f34.js.map": "/e-commerce-shop/static/js/main.953c4f34.js.map"
+    "main.046a8f0f.css.map": "/e-commerce-shop/static/css/main.046a8f0f.css.map",
+    "main.66113e3f.js.map": "/e-commerce-shop/static/js/main.66113e3f.js.map"
   },
   "entrypoints": [
-    "static/css/main.62275cf8.css",
-    "static/js/main.953c4f34.js"
+    "static/css/main.046a8f0f.css",
+    "static/js/main.66113e3f.js"
   ]
 }
