@@ -36,10 +36,11 @@ export const ShoppingCart = ({
               />
             );
           })}
-        </div>
-        <button type="button" className="checkoutButton">
+                  <button type="button" className="checkoutButton">
           Checkout!
         </button>
+        </div>
+
       </div>
     );
   }

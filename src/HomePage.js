@@ -17,13 +17,13 @@ function HomePage({ cartCount, mountainCatalogue, roadCatalogue }) {
       <div className="backgroundImg2 homeSection">
         <div className="innerDivWrapper">
           <h2>Find<br/>the right tools<br/>to explore<br/>the rough<br/>and<br/>the technical</h2>
-          <Link to="/catalogue"><button onClick={mountainCatalogue} className="bigButton">Discover</button></Link>
+          <Link to="/e-commerce-shop/catalogue"><button onClick={mountainCatalogue} className="bigButton">Discover</button></Link>
         </div>
       </div>
       <div className="backgroundImg3 homeSection">
       <div className="innerDivWrapper">
         <h2>Enjoy<br/> the<br/> smooth<br/> and <br/>fast</h2>
-        <Link to="/catalogue"><button onClick={roadCatalogue} className="bigButton">Discover</button></Link>
+        <Link to="/e-commerce-shop/catalogue"><button onClick={roadCatalogue} className="bigButton">Discover</button></Link>
       </div>
       </div>
       <Header cartCount={cartCount} />

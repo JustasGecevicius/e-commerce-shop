@@ -6,8 +6,8 @@
 }
 
 .shoppingCartItemImage {
-  height: 100%;
-  width: 280px;
+  width: 380px;
+  height: auto;
 }
 
 .header {
@@ -248,20 +248,21 @@ button:active {
   position: relative;
   top: calc(50px + 2rem);
   background-color: rgb(240, 240, 240);
-  max-height: calc(100vh - 50px - 5rem);
   display: flex;
   flex-direction: column;
   padding: 2rem;
   row-gap: 1rem;
 }
 .selectedItems .shoppingCartItemCard {
-  height: 120px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   background-color: white;
   justify-content: space-between;
 }
 .selectedItems .shoppingCartItemCard .shoppingCartItemTextDiv {
-  padding: 0 0.5rem;
+  padding: 0 2rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -275,16 +276,25 @@ button:active {
 .checkoutButton {
   z-index: 20;
   position: relative;
-  top: 100px;
   right: -50%;
   transform: translate(-50%);
+  max-width: 150px;
 }
 .checkoutButton:hover {
   transform: translateY(-2px) translate(-50%);
 }
 
+.amountWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper {
   height: 100vh;
+  padding-bottom: 2rem;
 }
 
 .profilesWrapper {
@@ -323,6 +333,10 @@ button:active {
 }
 
 @media screen and (max-width: 500px) {
+  .shoppingCartItemImage {
+    height: auto;
+    width: calc(100vw - 4rem);
+  }
   .header {
     flex-direction: column;
     justify-content: center;
@@ -351,6 +365,7 @@ button:active {
   }
   .selectedItems {
     top: calc(90px + 2rem);
+    overflow-y: auto;
   }
   .shoppingCartItemCard {
     flex-direction: column;
@@ -368,9 +383,6 @@ button:active {
     flex-direction: column;
     row-gap: 1rem;
     align-items: center;
-  }
-  .checkoutButton {
-    top: 150px !important;
   }
   .profilesBackground {
     top: calc(100px + 2rem);
