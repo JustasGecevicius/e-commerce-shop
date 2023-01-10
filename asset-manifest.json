@@ -1,27 +1,13 @@
 {
   "files": {
-    "main.css": "/e-commerce-shop/static/css/main.ccf68176.css",
-    "main.js": "/e-commerce-shop/static/js/main.335c46e0.js",
-    "static/media/mountain.jpg": "/e-commerce-shop/static/media/mountain.8749a67d0b5114f5bb3a.jpg",
-    "static/media/road.png": "/e-commerce-shop/static/media/road.32b3a5827d6d81a8cfb5.png",
-    "static/media/mountainside.jpg": "/e-commerce-shop/static/media/mountainside.dcd80e9ddade80395d03.jpg",
-    "static/media/initial.webp": "/e-commerce-shop/static/media/initial.04d672ab57fd9acfd8b8.webp",
-    "static/media/roadside.jpg": "/e-commerce-shop/static/media/roadside.b476704976ba18be4388.jpg",
-    "static/media/Cannondale-Logo.png": "/e-commerce-shop/static/media/Cannondale-Logo.99b47bd998fe2ad278f4.png",
-    "static/media/Canyon_Bicycles-Logo.wine.png": "/e-commerce-shop/static/media/Canyon_Bicycles-Logo.wine.a7ead051a3517984ce00.png",
-    "static/media/bike-logo-black-and-white.png": "/e-commerce-shop/static/media/bike-logo-black-and-white.788618d6085e298ac1fa.png",
-    "static/media/roadIcon.png": "/e-commerce-shop/static/media/roadIcon.534bce62f481e1651254.png",
-    "static/media/pngegg.png": "/e-commerce-shop/static/media/pngegg.7033f67421d5e63955d5.png",
-    "static/media/both.png": "/e-commerce-shop/static/media/both.16359b36d833676721a8.png",
-    "static/media/MountainIcon.png": "/e-commerce-shop/static/media/MountainIcon.ea5d3d7cdea67d13c422.png",
-    "static/media/specializedlogo.png": "/e-commerce-shop/static/media/specializedlogo.d9677f3211961654a84e.png",
+    "main.css": "/e-commerce-shop/static/css/main.d27e240c.css",
+    "main.js": "/e-commerce-shop/static/js/main.a268cf90.js",
     "index.html": "/e-commerce-shop/index.html",
-    "static/media/none.webp": "/e-commerce-shop/static/media/none.31d6cfe0d16ae931b73c.webp",
-    "main.ccf68176.css.map": "/e-commerce-shop/static/css/main.ccf68176.css.map",
-    "main.335c46e0.js.map": "/e-commerce-shop/static/js/main.335c46e0.js.map"
+    "main.d27e240c.css.map": "/e-commerce-shop/static/css/main.d27e240c.css.map",
+    "main.a268cf90.js.map": "/e-commerce-shop/static/js/main.a268cf90.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccf68176.css",
-    "static/js/main.335c46e0.js"
+    "static/css/main.d27e240c.css",
+    "static/js/main.a268cf90.js"
   ]
 }
