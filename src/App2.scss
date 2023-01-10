@@ -1,399 +1,390 @@
-
-
-  *, *::before, *::after{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-
-
-  
-  .shoppingCartItemImage{
-    width: 380px;
-    height: auto;
-  }
-  
-  .header{
-    padding: 1rem;
-    z-index: 10;
-    position: fixed;
-    background-color: white;
-    width: 100vw;
-    display: flex;  
-    justify-content: space-between;
-    .navButtons{
-        height: fit-content;
-        display: flex;
-        column-gap: 1rem;
-        align-items: center;
-    }
-    .logoImage{
-      width: 150px;
-    }
-  }
-  .cartImage{
-    max-width: 50px;
-    &:hover{
-        cursor: pointer;
-    }
-  }
-  .cartLabel{
-    
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    min-width: 60px;
-    justify-content: space-between;
-
-  }
-  .linkToCart{
-    font-weight: 500;
-    color: black;
-    text-decoration: none;
-  }
-
-  .homeSection{
-    font-size: 1.5rem;
-    color: white;
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
-  
-  
-  .backgroundImg1{
-    padding-left: 5rem;
-    justify-content:left;
-    background-image: url(/src/WebsiteImages/initial.webp);
 
-  }
-  .backgroundImg2{
-    justify-content: left;
-    text-align: left;    
-    background-image: url(/src/WebsiteImages/mountain.jpg);
-    h2{
-        line-height: 3,5rem;
+.shoppingCartItemImage {
+  width: 380px;
+  height: auto;
+}
 
-    }
-  }
-  .backgroundImg3{
-    color: black;
-    background-image: url(/src/WebsiteImages/road.png);
-  }
-
-  .innerDivWrapper{
-padding-left: 5rem;
-  }
-
-
-  .homePage{
-    overflow-x: hidden;
+.header {
+  padding: 1rem;
+  z-index: 10;
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  .navButtons {
+    height: fit-content;
     display: flex;
-    flex-direction: column;
-  }
-  
-
-
-  
-  /* CSS */
-  button {
-    border: 1px solid black;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    padding: 0.1rem 0.6rem;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    touch-action: manipulation;
-  }
-  
-  button:disabled {
-    pointer-events: none;
-  }
-  
-  button:hover {
-    color: #fff;
-    background-color: #1A1A1A;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  button:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-
-
-
-  .bigButton{
-    font-size: 1.5rem;
-    padding-bottom: 4px;
-    margin-top: 2rem;
-  }
-
-  .catalogueDiv{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;    
-    .picturesDiv{
-        display: flex;
-        flex-direction: row;
-        .side1Div{
-            background-image: url(/src/WebsiteImages/roadside.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 50vw;
-            height: 100vh;
-        }
-        .side2Div{
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 50vw;
-            height: 100vh;
-            background-image: url(/src/WebsiteImages/mountainside.jpg);
-        }
-        h2{
-          text-align: center;
-          color: white;
-          font-size: 5rem;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-
-    }
-    .allItems{
-      padding-top: 2rem;
-      width: 100vw;
-      background-color: rgb(240, 240, 240);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      row-gap: 2rem;
-    }
-    .item{
-      h3{
-        margin: 1rem 0;
-      }
-      p{
-        margin-bottom: 1rem;
-      }
-      max-width: 400px;
-      padding: 1rem;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      width: fit-content;
-      .itemImage{
-        max-width: 320px;
-      }
-    }
-    .bikeChoice{
-      h2{
-        margin: 1rem 0;
-      }
-      display: flex;
-      text-align: center;
-      .brandChoice{
-        width: 50vw;
-        .checkBoxWrapper{
-          display: flex;
-          column-gap: 2rem;
-          justify-content: center;
-        }
-      }
-      .terrainChoice{
-        width: 50vw;
-        .radioButtonWrapper{
-          display: flex;
-          justify-content: center;
-          column-gap: 2rem;
-        }
-      }
-    }
-    .selectionLogo{
-      max-width: 100px;
-      max-height: 50px;
-      border-radius: 5px;
-
-    }
-    .active{
-      border-bottom: 2px solid black;
-    }
-    .labelContainer{
-
-      input{
-        display: none;
-      }
-    }
-    .thingsDiv{
-      h2{
-        margin: 1rem 0;
-      }
-      text-align: center;
-    }
-
-  }
-  .terrain{
-    max-height: 50px;
-  }
-
-  .selectedItems{
-    width: 100vw;
-    background-color: rgb(240, 240, 240);
-    position: relative;
-    top: calc(50px + 2rem);
-    background-color: rgb(240, 240, 240);
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    row-gap: 1rem;
-    .shoppingCartItemCard{
-      height: fit-content;
-      display: flex;
-      background-color: white;
-      justify-content: space-between;
-      .shoppingCartItemTextDiv{
-        padding: 0 2rem;
-        width: 100%;
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
-  
-  
-  }
-  .cartItemNumber{
-    width: 2rem;
-  }
-  .checkoutButton{
-    z-index: 20;
-    position: relative;
-    right: -50%;
-    transform: translate(-50%);
-    max-width: 150px;
-    &:hover{
-      transform: translateY(-2px) translate(-50%);
-    }
-  }
-  .amountWrapper{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    justify-content: center;
+    column-gap: 1rem;
     align-items: center;
   }
-  .wrapper{
-    height: 100vh;
-    padding-bottom: 2rem;
+  .logoImage {
+    width: 150px;
   }
-.profilesWrapper{
+}
+.cartImage {
+  max-width: 50px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.cartLabel {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  min-width: 60px;
+  justify-content: space-between;
+}
+.linkToCart {
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+
+.homeSection {
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.backgroundImg1 {
+  padding-left: 5rem;
+  justify-content: left;
+  //background-image: url(/src/WebsiteImages/initial.webp);
+}
+.backgroundImg2 {
+  justify-content: left;
+  text-align: left;
+  // background-image: url(/src/WebsiteImages/mountain.jpg);
+  h2 {
+    line-height: 3, 5rem;
+  }
+}
+.backgroundImg3 {
+  color: black;
+  // background-image: url(/src/WebsiteImages/road.png);
+}
+
+.innerDivWrapper {
+  padding-left: 5rem;
+}
+
+.homePage {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CSS */
+button {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.1rem 0.6rem;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  touch-action: manipulation;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.bigButton {
+  font-size: 1.5rem;
+  padding-bottom: 4px;
+  margin-top: 2rem;
+}
+
+.catalogueDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  .picturesDiv {
+    display: flex;
+    flex-direction: row;
+    .side1Div {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 50vw;
+      height: 100vh;
+    }
+    .side2Div {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 50vw;
+      height: 100vh;
+    }
+    h2 {
+      text-align: center;
+      color: white;
+      font-size: 5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .allItems {
+    padding-top: 2rem;
+    width: 100vw;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 2rem;
+  }
+  .item {
+    h3 {
+      margin: 1rem 0;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    max-width: 400px;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    .itemImage {
+      max-width: 320px;
+    }
+  }
+  .bikeChoice {
+    h2 {
+      margin: 1rem 0;
+    }
+    display: flex;
+    text-align: center;
+    .brandChoice {
+      width: 50vw;
+      .checkBoxWrapper {
+        display: flex;
+        column-gap: 2rem;
+        justify-content: center;
+      }
+    }
+    .terrainChoice {
+      width: 50vw;
+      .radioButtonWrapper {
+        display: flex;
+        justify-content: center;
+        column-gap: 2rem;
+      }
+    }
+  }
+  .selectionLogo {
+    max-width: 100px;
+    max-height: 50px;
+    border-radius: 5px;
+  }
+  .active {
+    border-bottom: 2px solid black;
+  }
+  .labelContainer {
+    &:hover {
+      cursor: pointer;
+    }
+    input {
+      display: none;
+    }
+  }
+  .thingsDiv {
+    h2 {
+      margin: 1rem 0;
+    }
+    text-align: center;
+  }
+}
+.terrain {
+  max-height: 50px;
+}
+
+.selectedItems {
+  width: 100vw;
+  background-color: rgb(240, 240, 240);
+  position: relative;
+  top: calc(50px + 2rem);
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  row-gap: 1rem;
+  .shoppingCartItemCard {
+    height: fit-content;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    .shoppingCartItemTextDiv {
+      padding: 0 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+.cartItemNumber {
+  width: 2rem;
+}
+.checkoutButton {
+  z-index: 20;
+  position: relative;
+  right: -50%;
+  transform: translate(-50%);
+  max-width: 150px;
+  &:hover {
+    transform: translateY(-2px) translate(-50%);
+  }
+}
+.amountWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  height: 100vh;
+  padding-bottom: 2rem;
+}
+.profilesWrapper {
   height: fit-content;
   padding: 0;
   margin: 0f;
 }
-  .profilesBackground{
-    padding: 2rem;
-    position: absolute;
-    width: 100vw;
-    height: calc(100vh - 50px - 2rem);
-    top: calc(50px + 2rem);
-    overflow-y: hidden;
-    background-color: rgb(240, 240, 240); 
+.profilesBackground {
+  padding: 2rem;
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 50px - 2rem);
+  top: calc(50px + 2rem);
+  overflow-y: hidden;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .inputSection {
+    margin-bottom: 1rem;
+  }
+  .form {
     display: flex;
     flex-direction: column;
-    h2{
-      margin-bottom: 2rem;
-    }
-    .inputSection{
-      margin-bottom: 1rem;
-    }
-    .form{
-
+    label {
       display: flex;
       flex-direction: column;
-      label{
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.loaderDiv {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  .shoppingCartItemImage {
+    height: auto;
+    width: calc(100vw - 4rem);
+  }
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1rem;
+    .linkToCart {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+    .navButtons {
+      width: 100%;
+      display: flex !important;
+      justify-content: space-around !important;
+    }
+  }
+  .homeSection {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .innerDivWrapper {
+      padding: 0;
+    }
+  }
+  .selectedItems {
+    top: calc(90px + 2rem);
+    overflow-y: auto;
+  }
+  .shoppingCartItemCard {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content !important;
+    .shoppingCartItemTextDiv {
+      padding: 1rem !important;
+      .amountWrapper {
         display: flex;
         flex-direction: column;
-        margin-bottom: 1rem;
+        row-gap: 1rem;
+        align-items: center;
       }
     }
   }
 
-  @media screen and (max-width: 500px){
-    .shoppingCartItemImage{
-      height: auto;
-      width: calc(100vw - 4rem);
+  .profilesBackground {
+    top: calc(100px + 2rem);
+  }
+}
+@media screen and (max-width: 720px) {
+  .bikeChoice {
+    flex-direction: column;
+    align-items: center;
+    .choice {
+      width: 100% !important;
     }
-      .header{
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        row-gap: 1rem;
-        .linkToCart{
-          position: absolute;
-          right: 20px;
-          top: 15px;
-        }
-        .navButtons{
-          width: 100%;
-          display: flex !important;
-          justify-content: space-around !important;
-        }
-      }
-      .homeSection{
-        padding: 0 ;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        .innerDivWrapper{
-          padding: 0;
-        }
-      }
-      .selectedItems{
-        top:calc(90px + 2rem);
-        overflow-y: auto;
-      }
-      .shoppingCartItemCard{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: fit-content !important;
-        .shoppingCartItemTextDiv{
-          padding: 1rem !important;
-          .amountWrapper{
-            display: flex;
-            flex-direction: column;
-            row-gap: 1rem;
-            align-items: center;
-          }
-        }
-      }
-
-      .profilesBackground{
-        top: calc(100px + 2rem);
-      }
-  }  
-  @media screen and (max-width: 720px){
-    .bikeChoice{
-      flex-direction: column;
-      align-items: center;
-      .choice{
-        width: 100% !important;
-      }
-    }
-  } 
+  }
+}

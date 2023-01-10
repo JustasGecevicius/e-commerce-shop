@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 
 export const ShoppingCartItemCard = ({
@@ -22,7 +23,6 @@ export const ShoppingCartItemCard = ({
   };
 
   useEffect(() => {
-    //console..log(cart);
     let newCartCount = 0;
     Object.keys(cart).forEach((item) => {
       newCartCount += +cart[item]["count"];
@@ -31,16 +31,16 @@ export const ShoppingCartItemCard = ({
   }, [cart]);
 
   const removeItem = (e) => {
-    //console..log(e);
     setCart((prev) => {
-      let zeba = { ...prev };
-      if (Object.keys(zeba).length === 1) {
-        //console..log("length===1")
-        zeba = {};
-        return zeba;
+      let cartItems = { ...prev };
+      
+      if (Object.keys(cartItems).length === 1) {
+        cartItems = {};
+        setCartCount(0);
+        return {};
       } else {
-        delete zeba[e.target.className];
-        return zeba;
+        delete cartItems[e.target.className];
+        return cartItems;
       }
     });
   };

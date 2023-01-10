@@ -1,14 +1,8 @@
 import React from "react";
 import { ItemSelector } from "../Components/ItemSelector";
-import specialized from "../WebsiteImages/specializedlogo.png";
-import canyon from "../WebsiteImages/Canyon_Bicycles-Logo.wine.png";
-import cannondale from "../WebsiteImages/Cannondale-Logo.png";
-import mountain from "../WebsiteImages/MountainIcon.png";
-import road from "../WebsiteImages/roadIcon.png";
-import both from "../WebsiteImages/both.png"
 import { RadioItemSelector } from "../Components/RadioItemSelector";
 
-export const BikeSelection = ({ displayBrand, displayTerrain, MountainRoadAll }) => {
+export const BikeSelection = ({ displayBrand, displayTerrain, MountainRoadAll, mainImages }) => {
 
 
   return (
@@ -20,19 +14,19 @@ export const BikeSelection = ({ displayBrand, displayTerrain, MountainRoadAll })
             type="checkbox"
             className="cannondale"
             onChange={displayBrand}
-            src={cannondale}
+            src={mainImages["cannondaleLogo.png"]}
           />
           <ItemSelector
             type="checkbox"
             className="canyon"
             onChange={displayBrand}
-            src={canyon}
+            src={mainImages["canyonLogo.png"]}
           />
           <ItemSelector
             type="checkbox"
             className="specialized"
             onChange={displayBrand}
-            src={specialized}
+            src={mainImages["specializedLogo.png"]}
           />
         </div>
       </div>
@@ -43,23 +37,23 @@ export const BikeSelection = ({ displayBrand, displayTerrain, MountainRoadAll })
           
           <RadioItemSelector
             type="radio"
-            className="mountain"
+            className="Mountain"
             onChange={displayTerrain}
-            src={mountain}
+            src={mainImages["mountainIcon.png"]}
             MountainRoadAll={MountainRoadAll}
           />
           <RadioItemSelector
             type="radio"
-            className="road"
+            className="Road"
             onChange={displayTerrain}
-            src={road}
+            src={mainImages["roadIcon.png"]}
             MountainRoadAll={MountainRoadAll}
           />
           <RadioItemSelector
             type="radio"
             className="all"
             onChange={displayTerrain}
-            src={both}
+            src={mainImages["bothIcon.png"]}
             MountainRoadAll={MountainRoadAll}
           />
         </div>

@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -68,13 +70,11 @@
 .backgroundImg1 {
   padding-left: 5rem;
   justify-content: left;
-  background-image: url(/src/WebsiteImages/initial.webp);
 }
 
 .backgroundImg2 {
   justify-content: left;
   text-align: left;
-  background-image: url(/src/WebsiteImages/mountain.jpg);
 }
 .backgroundImg2 h2 {
   line-height: 3, 5rem;
@@ -82,7 +82,6 @@
 
 .backgroundImg3 {
   color: black;
-  background-image: url(/src/WebsiteImages/road.png);
 }
 
 .innerDivWrapper {
@@ -117,7 +116,7 @@ button:disabled {
 
 button:hover {
   color: #fff;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
@@ -143,7 +142,6 @@ button:active {
   flex-direction: row;
 }
 .catalogueDiv .picturesDiv .side1Div {
-  background-image: url(/src/WebsiteImages/roadside.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -156,7 +154,6 @@ button:active {
   background-repeat: no-repeat;
   width: 50vw;
   height: 100vh;
-  background-image: url(/src/WebsiteImages/mountainside.jpg);
 }
 .catalogueDiv .picturesDiv h2 {
   text-align: center;
@@ -227,6 +224,9 @@ button:active {
 }
 .catalogueDiv .active {
   border-bottom: 2px solid black;
+}
+.catalogueDiv .labelContainer:hover {
+  cursor: pointer;
 }
 .catalogueDiv .labelContainer input {
   display: none;
@@ -330,6 +330,15 @@ button:active {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+}
+
+.loaderDiv {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 500px) {
