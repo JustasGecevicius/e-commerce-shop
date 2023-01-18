@@ -64,7 +64,7 @@ export const ShoppingCart = ({
     </div>
   ) : (
     <div className="wrapper">
-      <Header cartCount={cartCount} />
+      <Header cartCount={cartCount} logo={mainImagesObject["logo.png"]} cartLogo={mainImagesObject["cartLogo.png"]}/>
       <div className="selectedItems">
         {Object.keys(cart).map((item, index) => {
           return (

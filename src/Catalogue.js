@@ -51,9 +51,12 @@ export const Catalogue = ({
       const typeDisplay = () => {
         brandsArray.forEach((brand) => {
           // eslint-disable-next-line array-callback-return
+          console.log(itemsObject, brandsArray, MountainRoadAll);
           Object.keys(itemsObject[brand][MountainRoadAll]).map(
             (bike, index) => {
+              console.log(imagesObject);
               displayItemsHolder.push({
+                
                 ...itemsObject[brand][MountainRoadAll][bike],
                 id: bike,
                 brand: brand,
@@ -181,7 +184,7 @@ export const Catalogue = ({
       let mountainArray = resolvedObject[elem].slice(0, index);
       let roadArray = resolvedObject[elem].slice(index + 1);
 
-      resolvedObject[elem] = { Mountain: mountainArray, Road: roadArray };
+      resolvedObject[elem] = { mountain: mountainArray, road: roadArray };
     });
     setimagesObject(resolvedObject);
   };

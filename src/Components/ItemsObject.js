@@ -1,6 +1,6 @@
 export const itemsObject = {
     "canyon": {
-        "Mountain": {
+        "mountain": {
             "0.2550578709664111": {
                 "imageURL": "/static/media/Grand Canyon 6 WMN.3546c1ead4bad77c71a2.jpg",
                 "price": 2500,
@@ -77,7 +77,7 @@ export const itemsObject = {
                 "productName": "Spectral Mullet CF 8 CLLCTV"
             }
         },
-        "Road": {
+        "road": {
             "0.7405965902679941": {
                 "imageURL": "/static/media/Endurace 6.6fe9a736f2d680f8db83.jpg",
                 "price": 2900,
@@ -131,7 +131,7 @@ export const itemsObject = {
         }
     },
     "specialized": {
-        "Mountain": {
+        "mountain": {
             "0.7980613361545428": {
                 "imageURL": "/static/media/Enduro Comp.2bb16cfd7191f56836c0.jpg",
                 "price": 1400,
@@ -193,7 +193,7 @@ export const itemsObject = {
                 "productName": "Turbo Levo Hardtail"
             }
         },
-        "Road": {
+        "road": {
             "0.6874063090428053": {
                 "imageURL": "/static/media/Allez Elite.4a1046abb70e14b18057.jpg",
                 "price": 1000,
@@ -217,7 +217,7 @@ export const itemsObject = {
         }
     },
     "cannondale": {
-        "Mountain": {
+        "mountain": {
             "0.02037752734357956": {
                 "imageURL": "/static/media/Habit 5.46a7a7b859219ff636fa.jpg",
                 "price": 1300,
@@ -269,7 +269,7 @@ export const itemsObject = {
                 "productName": "Scalpel Carbon 3"
             }
         },
-        "Road": {
+        "road": {
             "0.7398517379556306": {
                 "imageURL": "/static/media/SuperSix EVO SE.4690d0cbc15eecfa755d.jpg",
                 "price": 600,

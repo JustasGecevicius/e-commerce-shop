@@ -1,13 +1,6 @@
 import { NavigationButton } from "../Components/NavigationButton";
 import { ShoppingCartSymbol } from "../Components/ShoppingCartSymbol";
-import {
-  getStorage,
-  ref,
-  listAll,
-  getMetadata,
-  getDownloadURL,
-} from "firebase/storage";
-import { useState } from "react";
+
 
 export const Header = ({ cartCount, logo, cartLogo }) => {
 

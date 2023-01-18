@@ -37,14 +37,14 @@ export const BikeSelection = ({ displayBrand, displayTerrain, MountainRoadAll, m
           
           <RadioItemSelector
             type="radio"
-            className="Mountain"
+            className="mountain"
             onChange={displayTerrain}
             src={mainImages["mountainIcon.png"]}
             MountainRoadAll={MountainRoadAll}
           />
           <RadioItemSelector
             type="radio"
-            className="Road"
+            className="road"
             onChange={displayTerrain}
             src={mainImages["roadIcon.png"]}
             MountainRoadAll={MountainRoadAll}
