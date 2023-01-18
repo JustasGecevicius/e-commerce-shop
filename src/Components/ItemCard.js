@@ -7,7 +7,6 @@ export const ItemCard = ({
   brand,
   id,
 }) => {
-  ////console..log(updateCart);
   return (
     <div className="item">
       <img className="itemImage" src={imageURL} alt="Item" />

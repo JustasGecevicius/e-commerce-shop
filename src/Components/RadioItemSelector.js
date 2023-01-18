@@ -15,7 +15,6 @@ export const RadioItemSelector = ({
     newClass = className + " labelContainer";
   }
 
-  ////console..log("newCLass",newClass);
   return (
     <React.Fragment>
       <label className={newClass}>

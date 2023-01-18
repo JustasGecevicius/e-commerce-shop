@@ -25,12 +25,10 @@ export const Profile = ({ cartCount }) => {
   const [mainImagesObject, setMainImagesObject] = useState({});
 
   useEffect(() => {
-    //console.log("useEffect");
     const fetchList = async () => {
       const list = await listAll(listRefference);
       const metadataPromise = [];
       const itemLinkPromise = [];
-      //console.log(list, "list");
       list.items.forEach((itemRef) => {
         const metadata = getMetadata(itemRef);
         const item = getDownloadURL(itemRef);
@@ -39,11 +37,8 @@ export const Profile = ({ cartCount }) => {
       });
       const metadataPromises = Promise.all([...metadataPromise]);
       const itemPromises = Promise.all([...itemLinkPromise]);
-      //console.log(metadataPromises, itemPromises ,"all Promises");
       const allPromises = await Promise.all([metadataPromises, itemPromises]);
-      //console.log(allPromises);
   
-      // console.log(resolvedPromises[0]);
       // // eslint-disable-next-line array-callback-return
       allPromises[0].map((elem, index) => {
         setMainImagesObject((prev) => ({

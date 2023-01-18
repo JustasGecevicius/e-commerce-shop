@@ -12,9 +12,7 @@ export const ShoppingCartItemCard = ({
   setCartCount,
 }) => {
   const cartItemNumberChange = (e) => {
-    //console..log(e.target.value);
     setCart((prev) => {
-      //console..log(prev[e.target.id]);
       return {
         ...prev,
         [e.target.id]: { ...prev[e.target.id], count: e.target.value },
