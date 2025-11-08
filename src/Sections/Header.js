@@ -8,8 +8,8 @@ export const Header = ({ cartCount, logo, cartLogo }) => {
         <img className="logoImage" alt="logo" src={logo}></img>
       </div>
       <div className="navButtons">
-        {/* <NavigationButton page="/e-commerce-shop" pageName="Home" /> */}
-        {/* <NavigationButton page="/e-commerce-shop/catalogue" pageName="Catalogue" /> */}
+        <NavigationButton page="/e-commerce-shop" pageName="Home" />
+        <NavigationButton page="/e-commerce-shop/catalogue" pageName="Catalogue" />
         <NavigationButton page="/e-commerce-shop/profile" pageName="Profile" />
         <ShoppingCartSymbol
           page="/e-commerce-shop/shopping%20cart"
