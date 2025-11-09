@@ -25,7 +25,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm install
-      - run: npm run build --if-present
+      - name: Build
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: npm run build --if-present
       - run: |
           git config --global user.name $user_name
           git config --global user.email $user_email
