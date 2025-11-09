@@ -9,7 +9,7 @@ import ScrollToTop from "./ScrollToTop";
 import { initializeApp } from "firebase/app";
 
 export const App = () => {
-  console.log(process.env.REACT_APP_API_KEY);
+  console.log(process.env.REACT_APP_API_KEY, "X");
   const [cart, setCart] = useState({});
   const [cartCount, setCartCount] = useState(0);
   const [MountainRoadAll, setMountainRoadAll] = useState("all");
